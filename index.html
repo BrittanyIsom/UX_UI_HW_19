@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Brittany's Portfolio </title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://kit.fontawesome.com/079f0d8938.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="./Brittany Isom Logo (4).png" class="logo">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p> UX/UI Portfolio </p>
+                    <h1> Hi, I'm <span>Brittany</span><br> I am a UX/UI Designer</h1>
+                    <div> <button type="button"><span></span>Contact Me!</button></div>
+                </div>
+            </div>
+        </div>
+        <!---------About---------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./image 2.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me </h1>
+                        <p> I'm a UX/UI Designer based in Salt Lake City.  My favorite aspect of design is the ability to create something new and help people accomplish their vision.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link"onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('work')">Work</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span> UX Designer Technical Skills </span><br>Prototyping, Wireframing, Userflows </li>
+                                <li><span> Visual Design & Design Software </span><br>Proficiency with visual design software and knowledge of visual design best practices for typography, color theory, layout, icons, and general design theory.
+                                </li>
+                                <li><span> User Research & Usability Testing </span><br>User testing </li>
+                        
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="work">
+                            <ul>
+                                <li><span> Activities Anywhere</span><br> View Case Study</li>
+                                <li><span> Personal Besties</span><br> View Case Study</li>
+                                <li><span> Women Of The World</span><br> View Case Study</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span> University Of Utah</span><br> UX/UI Bootcamp</li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!------------Services--------->
+       <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My UX Skills</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h2>UX Designer Technical Skills</h2>
+                    <p> An important part of the design process is envisioning what a product will look like. I am able to achieve this through:</p>
+                    <ul> <li> Prototyping</li>
+                    <li> Wireframing</li>
+                <li> Userflows</li>
+            </ul>
+                    <a href="#"> Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <h2>Visual Design & Design Software</h2>
+                    <p> Proficiency with visual design software and knowledge of visual design best practices for typography, color theory, layout, icons, and general design theory.
+                    </p>
+                    <a href="#"> Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-bookmark"></i>
+                    <h2>User Research & Usability Testing</h2>
+                    <p> User research includes gathering data through user interviews, surveys, and other methods. It also involves analyzing this data to identify trends or patterns in user behavior.</p>
+                    <a href="#"> Learn More</a>
+                </div>
+
+            </div>
+        </div>
+       </div>
+       <!----------Portfolio------->
+       <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./Women of the World - Google Slides (1).png">
+                </div>
+                <div class="work">
+                    <img src="./Personal Besties - Google Slides.png">
+                </div>
+                <div class="work">
+                    <img src="./Copy of Module 4 Challenge - Google Slides.png">
+                </div>
+            </div>
+
+        </div>
+       </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+    
+        </script>
+    </body>
+</html>
